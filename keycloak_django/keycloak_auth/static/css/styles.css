@@ -1,0 +1,109 @@
+/* Général */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+}
+
+.messages {
+    position: fixed;
+    right: 20px;
+    top: 70px;
+    z-index: 9999;
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #343a40;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: #ccc;
+}
+
+.navbar .nav-item {
+    color: #fff;
+}
+
+.navbar .navbar-text {
+    color: #fff;
+}
+
+/* Login, Forgot Password et Create User */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 10%);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-container form {
+    width: 100%;
+}
+
+.login-container form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.login-container form .form-group:last-child {
+    margin-bottom: 3rem;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.forgot-password-link,
+.submit-button {
+    text-align: center;
+    display: block;
+}
+
+/* Boutons */
+.login-container button[type="submit"],
+.login-container .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.login-container button[type="submit"]:hover,
+.login-container .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.profile-section {
+    margin: 0 auto 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    max-width: 400px;
+}
+
+.profile-section h2 {
+    margin-bottom: 1rem;
+}
+
+
