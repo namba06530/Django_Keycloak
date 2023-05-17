@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from .secrets import SECRET_KEY, DB_USER, DB_PASSWORD, OIDC_DEV_ADMIN_USERNAME, OIDC_DEV_ADMIN_PASSWORD, \
-    EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_HOST, OIDC_RP_CLIENT_SECRET
+    EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_HOST, OIDC_RP_CLIENT_SECRET, OIDC_RP_REALM_NAME, OIDC_RP_CLIENT_ID, \
+    DB_HOST, DB_PORT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,8 +83,8 @@ DATABASES = {
         'NAME': 'django_keycloak_user',
         'USER': DB_USER,
         'PASSWORD': DB_PASSWORD,
-        'HOST': '192.168.2.10',
-        'PORT': '5452',
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
     }
 }
 
@@ -146,8 +147,8 @@ OIDC_OP_USER_ENDPOINT = 'http://127.0.0.1:28080/auth/realms/dev/protocol/openid-
 OIDC_OP_JWKS_ENDPOINT = 'http://127.0.0.1:28080/auth/realms/dev/protocol/openid-connect/certs'
 OIDC_OP_LOGOUT_ENDPOINT = "http://127.0.0.1:28080/auth/realms/dev/protocol/openid-connect/logout"
 
-OIDC_RP_REALM_NAME = 'dev'
-OIDC_RP_CLIENT_ID = 'dev-cli'  # Keycloak Client ID
+OIDC_RP_REALM_NAME = OIDC_RP_REALM_NAME
+OIDC_RP_CLIENT_ID = OIDC_RP_CLIENT_ID  # Keycloak Client ID
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/'
